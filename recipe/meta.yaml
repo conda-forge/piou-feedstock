@@ -29,7 +29,7 @@ test:
     - pip
   commands:
     - pip check
-    - python -m piou.test
+    - python -m piou.test -h
   imports:
     - piou
 about:
