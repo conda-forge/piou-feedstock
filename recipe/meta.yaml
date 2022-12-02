@@ -19,7 +19,7 @@ requirements:
   host:
     - python >=3.9,<4.0
     - pip
-    - poetry
+    - poetry-core >=1.4.0
   run:
     - python >=3.9,<4.0
     - rich >=10.11.0
