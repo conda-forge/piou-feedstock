@@ -1,11 +1,11 @@
-About piou
-==========
+About piou-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/piou-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Andarius/piou
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/piou-feedstock/blob/main/LICENSE.txt)
 
 Summary: CLI tool to build beautiful command-line interfaces with type validation
 
