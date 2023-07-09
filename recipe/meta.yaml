@@ -23,6 +23,7 @@ requirements:
   run:
     - python >=3.9,<4.0
     - rich >=10.11.0
+    - typing-extensions >= 4.4.0
 
 test:
   requires:
