@@ -31,7 +31,7 @@ test:
     - python {{ python_min }}
   commands:
     - pip check
-    - python -m piou.test -h
+    - python -m piou.example -h
   imports:
     - piou
 about:
