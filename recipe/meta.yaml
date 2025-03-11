@@ -1,5 +1,5 @@
 {% set name = "piou" %}
-{% set version = "0.13.1" %}
+{% set version = "0.14.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,27 +7,28 @@ package:
 
 source:
   url: https://github.com/Andarius/piou/archive/refs/tags/{{ version }}.tar.gz
-  sha256: eabc8b55eefea6a7cbc3888a48d2aaf5834992c65ae68db161f4a261a17cb2fc
+  sha256: 06a06e81845db7820bb8f62d0557e913e5f64d6ec06463c1811865b36907c59e
 
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.3.2
   run:
-    - python >=3.9,<4.0
+    - python >={{ python_min }},<4.0
     - rich >=10.11.0
     - typing-extensions >=4.4.0
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - python -m piou.example -h
