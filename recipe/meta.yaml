@@ -14,7 +14,7 @@ source:
 
 build:
   number: 0
-  script: uv pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
