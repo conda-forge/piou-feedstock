@@ -1,5 +1,7 @@
 {% set name = "piou" %}
 {% set version = "0.16.2" %}
+{% set python_min = "3.9" %}
+
 
 package:
   name: {{ name|lower }}
@@ -12,14 +14,14 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: uv pip install . -vv
   noarch: python
 
 requirements:
   host:
     - python {{ python_min }}
-    - pip
     - uv >=0.7.20,<1.0
+    - pip
   run:
     - python >={{ python_min }},<4.0
     - rich >=10.11.0,<15.0
