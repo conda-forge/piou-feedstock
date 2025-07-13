@@ -1,7 +1,5 @@
 {% set name = "piou" %}
-{% set version = "0.16.2" %}
-{% set python_min = "3.9" %}
-
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Andarius/piou/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ec29786831491d47472ca9cd2cb39e2024e1a4579bb6913178be0539dc982043
+  sha256: 89b5c177862ca2db3428fde27dce9162d6bd99e965ca92f5aa010f6e346454ae
 
 
 build:
@@ -20,8 +18,8 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - uv >=0.7.20,<1.0
     - pip
+    - hatchling
   run:
     - python >={{ python_min }},<4.0
     - rich >=10.11.0,<15.0
@@ -31,11 +29,16 @@ test:
   requires:
     - pip
     - python {{ python_min }}
+  source_files:
+    - examples/
   commands:
     - pip check
-    - python -m piou.example -h
+    - python -m examples -h
+    - python -m examples.simple -h
+    - python -m examples.derived -h
   imports:
     - piou
+
 about:
   home: https://github.com/Andarius/piou
   license: MIT
