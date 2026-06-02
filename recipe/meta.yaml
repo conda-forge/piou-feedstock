@@ -1,5 +1,5 @@
 {% set name = "piou" %}
-{% set version = "0.34.1" %}
+{% set version = "0.35.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Andarius/piou/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 45954b2f06848b409998df47f7c5dbf81fadfe412286829a55d0383bcfbe3110
+  sha256: df257dab67ec8f5ba2a0c47340053748d03e0aabfabc583da0be1f764e0ecd47
 
 
 build:
